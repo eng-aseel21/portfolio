@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eng. Aseel Khalifa | Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="aseel.png" alt="Your Photo" class="profile-img" />
+      <img src="aseel.png" alt="Eng. Aseel Khalifa" class="profile-img" />
       <h1>Eng. Aseel Khalifa</h1>
       <p class="title">Frontend Developer</p>
     </header>
@@ -20,8 +19,7 @@
     <section class="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate Front-End Developer dedicated to crafting clean, responsive, and engaging web interfaces. Proficient in HTML, CSS, JavaScript, and React, I enjoy building modern websites with a seamless user experience. I also utilize Bootstrap and jQuery for enhanced interactivity and responsiveness.
-        <br><br>
+        I'm a passionate Front-End Developer dedicated to crafting clean, responsive, and engaging web interfaces. Proficient in HTML, CSS, JavaScript, and React, I enjoy building modern websites with a seamless user experience. I also utilize Bootstrap and jQuery for enhanced interactivity and responsiveness.<br /><br />
         With a strong eye for detail and design, I aim to blend creativity and functionality in every project I work on.
       </p>
     </section>
@@ -36,13 +34,18 @@
         </div>
         <div class="card">
           <h3>Shopping Website Project</h3>
-          <p>A stylish, modern, and well-organized fashion store website, fully responsive and interactive across all devices.</p>
+          <p>A stylish and well-organized fashion store website, fully responsive for all devices.</p>
           <a href="https://eng-aseel21.github.io/shopping-website-project/" target="_blank" rel="noopener noreferrer">View Project</a>
         </div>
         <div class="card">
           <h3>Car Website Project</h3>
           <p>A modern, responsive car rental website with a dark theme, smooth animations, and easy navigation.</p>
           <a href="https://eng-aseel21.github.io/Car-website-project/" target="_blank" rel="noopener noreferrer">View Project</a>
+        </div>
+        <div class="card">
+          <h3>portfolio website </h3>
+          <p>A clean and responsive portfolio website to showcase web development skills, services, and projects with easy navigation and contact form.</p>
+          <a href="https://eng-aseel21.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">View Project</a>
         </div>
       </div>
     </section>
@@ -51,24 +54,33 @@
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> Email: <a href="mailto:aseelkhalifa89@gmail.com">aseelkhalifa89@gmail.com</a></p>
       <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/eng-aseel21" target="_blank" rel="noopener noreferrer">eng-aseel21</a></p>
-       <p>
-  <i class="fab fa-linkedin"></i>
-  LinkedIn:
-  <a href="https://www.linkedin.com/in/aseel-khalifa-8a8175340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">aseel-khalifa </a></p>
-
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
     </section>
+
     <footer>
       <p>© 2025 Eng. Aseel Khalifa</p>
     </footer>
   </div>
+
   <button id="topBtn" title="Go to top">↑</button>
 
   <script>
-    const btn = document.getElementById('topBtn');
+    // زر العودة للأعلى
+    const topBtn = document.getElementById("topBtn");
+
     window.onscroll = function () {
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
     };
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
 </body>
 </html>
+
+
