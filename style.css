@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Roboto', 'Cairo', sans-serif;
-  background: #f5f0ea; 
-  color: #3b3a42; 
+  background: linear-gradient(135deg, #AFD3E2, #EAFDFC);
+  color: #146C94;
   min-height: 100vh;
   padding: 40px 20px;
   display: flex;
@@ -20,28 +20,31 @@ body {
   max-width: 720px;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(91, 63, 146, 0.15); 
+  box-shadow: 0 12px 35px #146C94;
   padding: 45px 40px;
   text-align: center;
   transition: box-shadow 0.3s ease;
 }
 
 .container:hover {
-  box-shadow: 0 20px 50px rgba(91, 63, 146, 0.3);
+  box-shadow: 0 20px 50px #146C94;
 }
-
 .profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 35px;
+  margin: 0 auto 25px;
   position: relative;
   overflow: hidden;
-  border: 4px solid #5b3f92; 
-  box-shadow: 0 0 18px rgba(91, 63, 146, 0.3);
+  border: 4px solid #146C94;
+  box-shadow: 0 0 18px #146C94;
   animation: pulseScale 6s ease-in-out infinite;
-  cursor: default;
+}
+
+.profile-img:hover {
+  transform: scale(1.08) rotate(1deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .profile-img::before {
@@ -65,57 +68,57 @@ body {
 }
 
 @keyframes shineMove {
-  0% {
-    transform: rotate(25deg) translateX(-150%);
-  }
-  100% {
-    transform: rotate(25deg) translateX(150%);
-  }
+  0% { transform: rotate(25deg) translateX(-150%); }
+  100% { transform: rotate(25deg) translateX(150%); }
 }
 
 @keyframes pulseScale {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 header h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: #4a3c74; 
-  margin-bottom: 8px;
+  color: #146C94;
+  margin-bottom: 10px;
   font-family: 'Cairo', sans-serif;
 }
 
 header .title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #7563a3;
-  margin-bottom: 45px;
+  color: #146C94;
+  margin-bottom: 12px;
   font-family: 'Cairo', sans-serif;
 }
 
-section h2 {
-  font-size: 1.8rem;
-  color: #5b3f92; 
-  margin-bottom: 26px;
-  font-weight: 600;
-  font-family: 'Cairo', sans-serif;
-  position: relative;
+.intro {
+  font-size: 1.1rem;
+  color: #4c4b52;
+  margin-bottom: 18px;
+}
+
+.btn {
   display: inline-block;
-  padding-bottom: 10px;
-  cursor: default;
-  text-shadow: 0 2px 5px rgba(91, 63, 146, 0.3);
+  background-color: #146C94;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+  background-color: #0f5776;
+}
+
+/* === Sections === */
 section {
   margin-bottom: 50px;
   padding-bottom: 20px;
-  border-bottom: 1.5px solid #d8d0c9; 
+  border-bottom: 1.5px solid #d8d0c9;
   text-align: center;
 }
 
@@ -125,15 +128,29 @@ section.contact {
   padding-bottom: 0;
 }
 
+section h2 {
+  font-size: 1.8rem;
+  color: #146C94;
+  margin-bottom: 26px;
+  font-weight: 600;
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  cursor: default;
+  text-shadow: 0 2px 5px #146C94;
+}
+
 p {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #4c4b52; 
+  color: #4c4b52;
   max-width: 680px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
 }
 
+/* === Projects === */
 .project-cards {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +164,7 @@ p {
   border-radius: 16px;
   padding: 25px 22px;
   width: 270px;
-  box-shadow: 0 6px 22px rgba(91, 63, 146, 0.12);
+  box-shadow: 0 6px 22px #146C94;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   text-align: center;
   border: 1px solid #ccc6bf;
@@ -157,32 +174,45 @@ p {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 18px 45px rgba(91, 63, 146, 0.25);
+  box-shadow: 0 18px 45px #146C94;
 }
 
 .card h3 {
   font-size: 1.3rem;
   margin-bottom: 13px;
-  color: #4a3c74;
+  color: #146C94;
   font-weight: 700;
 }
 
 .card p {
   font-size: 1rem;
-  color: #635f66;
-  margin-bottom: 20px;
+  color: #146C94;
+  margin-bottom: 15px;
   min-height: 65px;
 }
 
+.tags {
+  margin-bottom: 15px;
+}
+
+.tags span {
+  background-color: #146C94;
+  color: #fff;
+  padding: 3px 10px;
+  margin: 3px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  display: inline-block;
+}
 .contact p {
   font-size: 1.05rem;
   margin-bottom: 15px;
-  color: #4c4b52;
+  color: #146C94;
   font-family: 'Roboto', sans-serif;
 }
 
 .contact i {
-  color: #7563a3;
+  color: #146C94;
   margin-left: 14px;
   min-width: 20px;
   text-align: center;
@@ -191,7 +221,7 @@ p {
 }
 
 .contact a {
-  color: #5b3f92;
+  color: #146C94;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -201,10 +231,9 @@ p {
 }
 
 .contact a:hover {
-  color: #4a3c74;
-  border-bottom: 2px solid #4a3c74;
+  color: #146C94;
+  border-bottom: 2px solid #146C94;
 }
-
 footer {
   margin-top: 50px;
   font-size: 0.9rem;
@@ -212,12 +241,28 @@ footer {
   user-select: none;
   font-family: 'Roboto', sans-serif;
   cursor: default;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.3rem;
+  color: #146C94;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0f5776;
 }
 #topBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #5b3f92;
+  background-color: #146C94;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -225,12 +270,32 @@ footer {
   height: 45px;
   font-size: 1.8rem;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(91, 63, 146, 0.6);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 18px #146C94;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   display: none;
   z-index: 1000;
 }
 
 #topBtn:hover {
-  background-color: #4a3c74;
+  background-color: #0f5776;
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
 }

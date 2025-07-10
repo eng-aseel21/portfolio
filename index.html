@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Frontend Developer portfolio of Eng. Aseel Khalifa showcasing responsive websites and web applications.">
+  <meta name="author" content="Aseel Khalifa">
+  <meta name="keywords" content="Frontend Developer, Portfolio, Aseel Khalifa, HTML, CSS, JavaScript, React, Bootstrap">
   <title>Eng. Aseel Khalifa | Frontend Developer</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="aseel.png" alt="Eng. Aseel Khalifa" class="profile-img" />
+      <img src="img/aseel.png" alt="Eng. Aseel Khalifa" class="profile-img" />
       <h1>Eng. Aseel Khalifa</h1>
       <p class="title">Frontend Developer</p>
+      <p class="intro">Crafting responsive, modern web experiences with passion and precision.</p>
+      <a href="cv.pdf" class="btn" download>Download CV</a>
     </header>
 
     <section class="about">
@@ -30,22 +36,26 @@
         <div class="card">
           <h3>Food Website Project</h3>
           <p>A simple, user-friendly food ordering website with a clean and responsive design for all devices.</p>
-          <a href="https://eng-aseel21.github.io/food-website-project/" target="_blank" rel="noopener noreferrer">View Project</a>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a href="https://eng-aseel21.github.io/food-website-project/" target="_blank">View Project</a>
         </div>
         <div class="card">
           <h3>Shopping Website Project</h3>
           <p>A stylish and well-organized fashion store website, fully responsive for all devices.</p>
-          <a href="https://eng-aseel21.github.io/shopping-website-project/" target="_blank" rel="noopener noreferrer">View Project</a>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+          <a href="https://eng-aseel21.github.io/shopping-website-project/" target="_blank">View Project</a>
         </div>
         <div class="card">
           <h3>Car Website Project</h3>
           <p>A modern, responsive car rental website with a dark theme, smooth animations, and easy navigation.</p>
-          <a href="https://eng-aseel21.github.io/Car-website-project/" target="_blank" rel="noopener noreferrer">View Project</a>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>Animations</span></div>
+          <a href="https://eng-aseel21.github.io/Car-website-project/" target="_blank">View Project</a>
         </div>
         <div class="card">
-          <h3>portfolio website </h3>
+          <h3>Portfolio Website</h3>
           <p>A clean and responsive portfolio website to showcase web development skills, services, and projects with easy navigation and contact form.</p>
-          <a href="https://eng-aseel21.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">View Project</a>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a href="https://eng-aseel21.github.io/portfolio-website/" target="_blank">View Project</a>
         </div>
       </div>
     </section>
@@ -53,21 +63,24 @@
     <section class="contact">
       <h2>Contact</h2>
       <p><i class="fas fa-envelope"></i> Email: <a href="mailto:aseelkhalifa89@gmail.com">aseelkhalifa89@gmail.com</a></p>
-      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/eng-aseel21" target="_blank" rel="noopener noreferrer">eng-aseel21</a></p>
-      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/eng-aseel21" target="_blank">eng-aseel21</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/aseelkhalifa" target="_blank">linkedin.com/in/aseelkhalifa</a></p>
     </section>
 
     <footer>
       <p>© 2025 Eng. Aseel Khalifa</p>
+      <div class="social-icons">
+        <a href="https://github.com/eng-aseel21" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/aseelkhalifa" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:aseelkhalifa89@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </footer>
   </div>
 
   <button id="topBtn" title="Go to top">↑</button>
 
   <script>
-    // زر العودة للأعلى
     const topBtn = document.getElementById("topBtn");
-
     window.onscroll = function () {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         topBtn.style.display = "block";
@@ -75,12 +88,9 @@
         topBtn.style.display = "none";
       }
     };
-
     topBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>
 </html>
-
-
